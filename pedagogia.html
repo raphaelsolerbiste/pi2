@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedagogia</title>
+  <style>
+    #video {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#video iframe {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.responsive-iframe {
+ width: 85%;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding-bottom: 5vh;
+}
+
+.responsive-iframe iframe {
+  width: 85%;
+  height: 50vh;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px double white;
+      border-radius: 1.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1%;
+      box-sizing: border-box;        
+}
+
+    html,
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('pedagogia.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Georgia, serif;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 10px;
+    }
+
+    #conteudo {
+      width: 85%;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1%;
+      padding: 2em;
+      box-sizing: border-box;
+    }
+
+    p {
+      margin-right: 10%;
+      margin-left: 10%;
+      text-indent: 30px;
+      font-size: 1.1em;
+      text-align: left;
+    }
+
+    h1,h2 {
+      color: rgb(12, 93, 72);
+    }
+    h2{ text-indent: 30px;
+text-align: center;
+  }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    #botaovoltar {
+      background-color: rgb(12, 93, 72);
+      color: white;
+      width: 10vh;
+      height: 5vh;
+      border-radius: 1.5em;
+      cursor: pointer;
+      margin: 1vh;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      margin-left: 4vh;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #botaovoltar:hover {
+      background-color: white;
+      color: rgb(12, 93, 72);
+      border: 2px double rgb(12, 93, 72);
+    }
+
+    img {
+      border-radius: 1em;
+      margin: 1em 0;
+      max-width: 100%;
+      height: auto;
+    }
+     ul{
+      padding-inline-start: 7vh;
+      padding-inline-end: 7vh;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      #conteudo,.responsive-iframe {
+        width: 95%;
+        padding: 1.5em;
+      }
+
+      .responsive-iframe{
+        width: 95%;
+      }
+
+      p {
+        font-size: 1em;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+
+      #botaovoltar {
+        width: 12vh;
+        height: 5vh;
+        font-size: 1em;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+        justify-content: flex-start;
+        background-size: cover;
+        padding: 10px;
+      }
+
+      #conteudo,.responsive-iframe {
+        width: 95%;
+        padding: 1em;
+        border-radius: 1em;
+      }
+        .responsive-iframe{
+        width: 95%;
+      }
+
+
+      p {
+        font-size: 0.95em;
+        text-indent: 15px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: justify;
+      }
+
+      h1 {
+        font-size: 1.3em;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      #botaovoltar {
+        width: 100px;
+        height: 40px;
+        margin-left: 2vh;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a id="botaovoltar" href="index.html">
+    Voltar
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+      <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+    </svg>
+  </a>
+
+  <audio id="clickSound" src="ingle-mouse-click-sound-hd-379373.mp3"></audio>
+
+  <div class="responsive-iframe">
+    <h1>Assista ao vídeo</h1>
+    <iframe src="https://www.youtube.com/watch?v=awIYUdAZyZw" title="Vídeo sobre Pedagogia" allowfullscreen></iframe>
+    <h2><a href="https://www.youtube.com/watch?v=awIYUdAZyZw" style="color:rgb(12, 93, 72) ;">Se o video não funcionar clique aqui!</a></h2>
+  </div>
+
+<section id="conteudo">
+  <h1>PEDAGOGIA</h1>
+  <p>
+    O curso de Pedagogia forma profissionais preparados para atuar na educação em diferentes espaços — escolas, organizações sociais e instituições — promovendo aprendizagem, inclusão e formação humana. O pedagogo planeja, intervém e avalia processos educativos, contribuindo para a construção de uma sociedade mais justa e crítica.
+  </p>
+
+  <h2>MATÉRIAS ESCOLARES QUE MAIS SE COMUNICAM COM A PEDAGOGIA</h2>
+  <ul style="width: 85%;">
+    <li><strong>Língua Portuguesa / Redação:</strong> essencial para comunicação, elaboração de relatórios, planos de aula e registros escolares.</li>
+    <li><strong>Psicologia:</strong> base para compreender o desenvolvimento humano, aprendizagem e as relações em sala de aula.</li>
+    <li><strong>Sociologia:</strong> ajuda a entender o contexto social e cultural em que a educação acontece.</li>
+    <li><strong>Pedagogia / Didática:</strong> introduz conceitos sobre ensino, planejamento e estratégias pedagógicas.</li>
+    <li><strong>Artes:</strong> contribui para atividades lúdicas, criatividade e desenvolvimento estético, importantes na educação infantil.</li>
+    <li><strong>Matemática e Ciências:</strong> úteis para planejamento de conteúdos e para o trabalho interdisciplinar.</li>
+  </ul>
+
+  <h2>DURAÇÃO E ESTRUTURA</h2>
+  <p style="text-indent: 0px;"><strong>Média:</strong> 4 anos, divididos em 8 semestres.<br>
+     <strong>Modalidade:</strong> Licenciatura/Bacharelado (dependendo da instituição).<br>
+     <strong>Estágio:</strong> Obrigatório, com atividades em escolas e espaços educativos, geralmente a partir do 2º ou 3º ano.<br>
+     <strong>TCC/Trabalho de Conclusão:</strong> Exigido na maioria das instituições.
+  </p>
+
+  <h2>DISCIPLINAS PRINCIPAIS</h2>
+  <p>O curso articula teoria e prática, abordando desenvolvimento humano, processos de ensino-aprendizagem, políticas públicas e práticas pedagógicas.</p>
+
+  <h3>Ciclo básico (1º ao 2º ano)</h3>
+  <ul style="width: 85%;">
+    <li>Introdução à Pedagogia e História da Educação</li>
+    <li>Psicologia da Educação</li>
+    <li>Didática e Planejamento de Ensino</li>
+    <li>Alfabetização e Letramento</li>
+    <li>Fundamentos da Educação Infantil</li>
+    <li>Sociologia da Educação</li>
+    <li>Metodologia da Pesquisa em Educação</li>
+  </ul>
+
+  <h3>Ciclo profissionalizante (3º e 4º ano)</h3>
+  <ul style="width: 85%;">
+    <li>Gestão Escolar e Organização do Trabalho Pedagógico</li>
+    <li>Avaliação Educacional</li>
+    <li>Educação Inclusiva e Atendimento Pedagógico Especializado</li>
+    <li>Didáticas Específicas (alfabetização, infantil, séries iniciais)</li>
+    <li>Estágio Supervisionado em diferentes níveis de ensino</li>
+    <li>Políticas Públicas e Legislação Educacional</li>
+    <li>Projeto Integrador / TCC</li>
+  </ul>
+
+  <h2>FORMAÇÃO E PERFIL DO PEDAGOGO</h2>
+  <ul style="width: 85%;">
+    <li>Capacidade de planejar e organizar práticas educativas;</li>
+    <li>Habilidades comunicativas e domínio da linguagem escrita;</li>
+    <li>Empatia e sensibilidade para trabalhar com diferentes faixas etárias;</li>
+    <li>Capacidade de avaliar processos de aprendizagem e propor intervenções;</li>
+    <li>Competência para atuar em projetos sociais e em gestão educacional.</li>
+  </ul>
+
+  <h2>ATUAÇÃO PROFISSIONAL</h2>
+  <p>
+    O pedagogo pode atuar em diversas frentes dentro e fora das escolas, oferecendo alternativas profissionais variadas.
+  </p>
+
+  <h3>Ambientes escolares</h3>
+  <ul style="width: 85%;">
+    <li>Educação Infantil</li>
+    <li>Ensino Fundamental (anos iniciais)</li>
+    <li>Coordenação pedagógica e gestão escolar</li>
+    <li>Atendimento educacional especializado</li>
+  </ul>
+
+  <h3>Outros campos de atuação</h3>
+  <ul style="width: 85%;">
+    <li>Projetos sociais e ONGs com foco em educação</li>
+    <li>Educação de jovens e adultos (EJA)</li>
+    <li>Consultoria pedagógica e elaboração de materiais didáticos</li>
+    <li>Formação continuada de professores e trabalho em empresas com foco em educação corporativa</li>
+  </ul>
+</section>
+
+  <script>
+const clickAudio = document.getElementById("clickSound");
+
+function tocarSomAntesDeIr(event, url = null) {
+  event.preventDefault(); 
+  clickAudio.currentTime = 0;
+  clickAudio.play();
+
+  if (url) {
+    setTimeout(() => {
+      window.location.href = url;
+    }, 200);
+  }
+}
+
+document.querySelectorAll("a, button").forEach(el => {
+  el.addEventListener("click", function(e) {
+    if (el.tagName === "A" && el.href) {
+      tocarSomAntesDeIr(e, el.href);
+    } else {
+      clickAudio.currentTime = 0;
+      clickAudio.play();
+    }
+  });
+});
+</script>
+</body>
+</html>

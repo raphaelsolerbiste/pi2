@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciência da Computação</title>
+  <style>
+    #video {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#video iframe {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.responsive-iframe {
+ width: 85%;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding-bottom: 5vh;
+}
+
+.responsive-iframe iframe {
+  width: 85%;
+  height: 50vh;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px double white;
+      border-radius: 1.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1%;
+      box-sizing: border-box;        
+}
+
+    html,
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('ccomputacao.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Georgia, serif;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 10px;
+    }
+
+    #conteudo {
+      width: 85%;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1%;
+      padding: 2em;
+      box-sizing: border-box;
+    }
+
+    p {
+      margin-right: 10%;
+      margin-left: 10%;
+      text-indent: 30px;
+      font-size: 1.1em;
+      text-align: left;
+    }
+
+    h1,h2 {
+      color: rgb(12, 93, 72);
+    }
+    h2{ text-indent: 30px;
+text-align: center;
+  }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    #botaovoltar {
+      background-color: rgb(12, 93, 72);
+      color: white;
+      width: 10vh;
+      height: 5vh;
+      border-radius: 1.5em;
+      cursor: pointer;
+      margin: 1vh;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      margin-left: 4vh;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #botaovoltar:hover {
+      background-color: white;
+      color: rgb(12, 93, 72);
+      border: 2px double rgb(12, 93, 72);
+    }
+
+    img {
+      border-radius: 1em;
+      margin: 1em 0;
+      max-width: 100%;
+      height: auto;
+    }
+     ul{
+      padding-inline-start: 7vh;
+      padding-inline-end: 7vh;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      #conteudo,.responsive-iframe {
+        width: 95%;
+        padding: 1.5em;
+      }
+
+      .responsive-iframe{
+        width: 95%;
+      }
+
+      p {
+        font-size: 1em;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+
+      #botaovoltar {
+        width: 12vh;
+        height: 5vh;
+        font-size: 1em;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+        justify-content: flex-start;
+        background-size: cover;
+        padding: 10px;
+      }
+
+      #conteudo,.responsive-iframe {
+        width: 95%;
+        padding: 1em;
+        border-radius: 1em;
+      }
+        .responsive-iframe{
+        width: 95%;
+      }
+
+
+      p {
+        font-size: 0.95em;
+        text-indent: 15px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: justify;
+      }
+
+      h1 {
+        font-size: 1.3em;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      #botaovoltar {
+        width: 100px;
+        height: 40px;
+        margin-left: 2vh;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a id="botaovoltar" href="index.html">
+    Voltar
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+      <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+    </svg>
+  </a>
+
+  <audio id="clickSound" src="ingle-mouse-click-sound-hd-379373.mp3"></audio>
+
+  <div class="responsive-iframe">
+    <h1>Assista ao vídeo</h1>
+    <iframe src="https://www.youtube.com/watch?v=nwu0px-eLfw&t=28s" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+   <h2><a href="https://www.youtube.com/watch?v=nwu0px-eLfw&t=28s" style="color:rgb(12, 93, 72) ;">Se o video não funcionar clique aqui!</a></h2>
+  </div>
+
+<section id="conteudo">
+  <h1>Ciência da Computação</h1>
+  <p><strong>Carreira em Desenvolvimento de Software</strong></p>
+
+  <h2>INTRODUÇÃO</h2>
+  <p>
+    O desenvolvimento de software é uma das áreas mais importantes e valorizadas da tecnologia moderna. Envolve criar programas, sites, aplicativos e jogos digitais que fazem parte do nosso cotidiano — desde redes sociais e sistemas bancários até plataformas de ensino e entretenimento. Ser desenvolvedor é ficar no centro da inovação, transformando ideias em soluções reais e criativas.
+  </p>
+
+  <h2>DESENVOLVIMENTO</h2>
+  <p>
+    O desenvolvedor é responsável por transformar lógica em funcionamento. Ele escreve o código que dá vida a sites, sistemas e jogos. A profissão se divide em várias especializações:
+  </p>
+  <ul>
+    <li><strong>Desenvolvedor Backend:</strong> cuida da parte interna do sistema, como bancos de dados, segurança e lógica do servidor.</li>
+    <li><strong>Desenvolvedor Frontend:</strong> trabalha na interface e interatividade (HTML, CSS, JavaScript).</li>
+    <li><strong>Desenvolvedor Full Stack:</strong> atua tanto no backend quanto no frontend.</li>
+    <li><strong>Desenvolvedor Mobile:</strong> cria aplicativos para Android e iOS.</li>
+    <li><strong>Engenheiro de Software:</strong> projeta sistemas complexos e arquitetura de software.</li>
+    <li><strong>Desenvolvedor de Jogos:</strong> cria experiências interativas programando mecânicas, física e IA em engines como Unity ou Unreal.</li>
+  </ul>
+  <p>
+    O mercado de tecnologia é versátil: o mesmo conhecimento em programação pode ser aplicado em sites, sistemas empresariais, aplicativos e jogos digitais.
+  </p>
+
+  <h2>QUEBRA DE PRECONCEITOS SOBRE A ÁREA</h2>
+  <p>
+    Existe a ideia de que programar é “muito difícil” ou só para quem domina matemática. Na prática, programar é resolver problemas com lógica e criatividade — habilidades que se desenvolvem com prática. Outro equívoco é imaginar desenvolvedores trabalhando isolados; na realidade, é uma atividade colaborativa envolvendo designers, analistas, artistas e outros profissionais.
+  </p>
+  <p>
+    No mercado de jogos, também há preconceitos: não é apenas “brincar com videogames”, mas um setor profissional e lucrativo, com muitas oportunidades no Brasil.
+  </p>
+
+  <h2>O QUE DEVEM APRENDER E O QUE O CURSO OFERECE</h2>
+  <p>
+    O curso de Ciência da Computação oferece uma base sólida para quem deseja seguir no desenvolvimento. Entre disciplinas e conhecimentos essenciais:
+  </p>
+  <ul>
+    <li><strong>Lógica de Programação e Estruturas de Dados:</strong> fundamentos para qualquer linguagem (Java, Python, C#, JavaScript etc.).</li>
+    <li><strong>Banco de Dados:</strong> armazenamento e gestão de informações.</li>
+    <li><strong>Engenharia de Software:</strong> planejamento, desenvolvimento e testes de sistemas.</li>
+    <li><strong>Redes e Sistemas Operacionais:</strong> como programas se comunicam e funcionam internamente.</li>
+    <li><strong>Computação Gráfica e Inteligência Artificial:</strong> aplicáveis em sistemas e desenvolvimento de jogos.</li>
+  </ul>
+  <p>
+    Com essa formação, o aluno pode se especializar em desenvolvimento web, mobile, backend, IA ou no mercado de jogos digitais.
+  </p>
+
+  <h2>BENEFÍCIOS DE FAZER O CURSO</h2>
+  <ul>
+    <li>Alta empregabilidade, com demanda crescente no Brasil e no exterior;</li>
+    <li>Bons salários e oportunidades de crescimento rápido;</li>
+    <li>Possibilidade de trabalho remoto e internacional;</li>
+    <li>Desenvolvimento do raciocínio lógico e pensamento criativo;</li>
+    <li>Liberdade para criar soluções inovadoras, desde sistemas empresariais até jogos e aplicativos.</li>
+  </ul>
+</section>
+
+  <script>
+const clickAudio = document.getElementById("clickSound");
+
+function tocarSomAntesDeIr(event, url = null) {
+  event.preventDefault(); 
+  clickAudio.currentTime = 0;
+  clickAudio.play();
+
+  if (url) {
+    setTimeout(() => {
+      window.location.href = url;
+    }, 200);
+  }
+}
+
+document.querySelectorAll("#botaovoltar").forEach(el => {
+  el.addEventListener("click", function(e) {
+    tocarSomAntesDeIr(e, el.href);
+  });
+});
+</script>
+</body>
+</html>

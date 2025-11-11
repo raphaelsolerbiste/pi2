@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-image: url('fotomenu1.png');
+      background-size: cover;
+      background-position: center;
+      font-family: Georgia, serif;
+    }
+
+    #menu1 {
+      border: 2px solid white;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 1.8em;
+      width: 70%;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    #menu2 {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    #menu3 {
+      width: 69%;
+      height: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      padding: 1em;
+      text-align: justify;
+    }
+
+    p {
+      margin-right: 10%;
+      margin-left: 10%;
+      text-indent: 30px;
+      font-size: 1.1em;
+    }
+
+    .botoes1 {
+      border: 2px double white;
+      border-radius: 1.8em;
+      font-size: x-large;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: rgb(12, 93, 72);
+      width: 95%;
+      height: 13%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .botoes1:hover {
+      background-color: rgb(12, 93, 72);
+      color: white;
+    }
+
+    .botoes2a {
+      background-color: rgb(12, 93, 72);
+      color: white;
+      width: auto;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 1.8em;
+      font-size: large;
+      font-weight: bold;
+      border: 2px double white;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+       font-family: Georgia, serif;
+    }
+
+    .botoes2a:hover {
+      background-color: white;
+      color: rgb(12, 93, 72);
+      border: 2px double rgb(12, 93, 72);
+    }
+
+    #botoesExtras {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    h1 {
+      color: rgb(12, 93, 72);
+      text-align: center;
+       font-family: Georgia, serif;
+    }
+
+    @media (max-width: 900px) {
+      #menu1 {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+      }
+
+      #menu2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+
+      .botoes1 {
+        width: 45%;
+        height: auto;
+        font-size: large;
+        margin: 5px 0;
+      }
+
+      #menu3 {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-position: center;
+        background-size: cover;
+        padding: 10px;
+      }
+
+      #menu1 {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border-radius: 1em;
+      }
+
+      #menu2 {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+
+      .botoes1 {
+        width: 90%;
+        font-size: medium;
+        padding: 10px;
+      }
+
+      #menu3 {
+        width: 95%;
+        border-radius: 1em;
+        padding: 1em;
+      }
+
+      p {
+        font-size: 1em;
+        margin: 0 5%;
+      }
+
+      h1 {
+        font-size: 1.3em;
+      }
+
+      .botoes2a {
+        font-size: medium;
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="clickSound" src="ingle-mouse-click-sound-hd-379373.mp3"></audio>
+  <div id="menu1">
+    <div id="menu2">
+      <button class="botoes1" onclick="mostrarTexto('sobre')">Sobre o trabalho</button>
+      <button class="botoes1" onclick="mostrarTexto('ciencia')">Ciência da Computação</button>
+      <button class="botoes1" onclick="mostrarTexto('direito')">Direito</button>
+      <button class="botoes1" onclick="mostrarTexto('odonto')">Odontologia</button>
+      <button class="botoes1" onclick="mostrarTexto('pedagogia')">Pedagogia</button>
+     
+    </div>
+
+    <div id="menu3">
+      <h1>Sobre o trabalho</h1>
+      <p id="textoPrincipal">
+        Bem-vindo! Clique nos botões ao lado para conhecer mais sobre cada curso.
+      </p>
+      <div id="botoesExtras">
+        <a class="botoes2a" href="https://docs.google.com/forms/d/e/1FAIpQLSfQj1eCzsszDaziLAAn45AOqDI2mIPK5bMn96XiHaQWzoujFg/viewform?usp=dialog" target="_blank">Questionário geral</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function tocarSomAntesDeIr(event, url) {
+  event.preventDefault();
+  const clickAudio = document.getElementById("clickSound");
+  clickAudio.currentTime = 0;
+  clickAudio.play();
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 200);
+}
+
+    function mostrarTexto(opcao) {
+const clickAudio = document.getElementById("clickSound");
+
+document.addEventListener("click", function(e) {
+  if (e.target.tagName === "BUTTON" || e.target.classList.contains("botoes2a")) {
+    clickAudio.currentTime = 0;
+    clickAudio.play();
+  }
+});
+
+      const titulo = document.querySelector("#menu3 h1");
+      const texto = document.getElementById("textoPrincipal");
+      const botoesExtras = document.getElementById("botoesExtras");
+
+      switch (opcao) {
+
+        case "sobre":
+          titulo.textContent = "Sobre o trabalho";
+          texto.textContent = "Este projeto apresenta diferentes cursos e suas áreas de atuação, explorando as principais características de cada um.";
+          botoesExtras.innerHTML = `<a class="botoes2a" href="https://docs.google.com/forms/d/e/1FAIpQLSfQj1eCzsszDaziLAAn45AOqDI2mIPK5bMn96XiHaQWzoujFg/viewform?usp=dialog" target="_blank">Questionário geral</a>`;
+          break;
+
+        case "ciencia":
+          titulo.textContent = "Ciência da Computação";
+          texto.textContent = "O curso de Ciência da Computação forma profissionais capacitados a desenvolver softwares, resolver problemas complexos e aplicar tecnologias emergentes.";
+          botoesExtras.innerHTML = `
+           <a href="ciencia.html" class="botoes2a" onclick="tocarSomAntesDeIr(event, this.href)">Mais informações</a>
+            <a class="botoes2a" href="https://docs.google.com/forms/d/e/1FAIpQLSfQj1eCzsszDaziLAAn45AOqDI2mIPK5bMn96XiHaQWzoujFg/viewform?usp=dialog" target="_blank">Questionario geral</a>
+          `;
+          break;
+
+        case "direito":
+          titulo.textContent = "Direito";
+          texto.textContent = "O curso de Direito prepara profissionais para atuar na defesa da justiça, conhecendo as leis e regulamentos que regem a sociedade.";
+          botoesExtras.innerHTML = `
+            <a href="direito.html" class="botoes2a" onclick="tocarSomAntesDeIr(event, this.href)">Mais informações</a>
+            <a class="botoes2a" href="https://docs.google.com/forms/d/e/1FAIpQLSfQj1eCzsszDaziLAAn45AOqDI2mIPK5bMn96XiHaQWzoujFg/viewform?usp=dialog" target="_blank">Questionario geral</a>
+          `;
+          break;
+
+        case "odonto":
+          titulo.textContent = "Odontologia";
+          texto.textContent = "Odontologia forma profissionais dedicados à saúde bucal, prevenindo e tratando doenças, e promovendo o bem-estar dos pacientes.";
+          botoesExtras.innerHTML = `
+           <a href="odonto.html" class="botoes2a" onclick="tocarSomAntesDeIr(event, this.href)">Mais informações</a>
+            <a class="botoes2a" href="https://docs.google.com/forms/d/e/1FAIpQLSfQj1eCzsszDaziLAAn45AOqDI2mIPK5bMn96XiHaQWzoujFg/viewform?usp=dialog" target="_blank">Questionario geral</a>
+          `;
+          break;
+
+        case "pedagogia":
+          titulo.textContent = "Pedagogia";
+          texto.textContent = "O curso de Pedagogia prepara educadores para o ensino e a gestão escolar, promovendo a aprendizagem e o desenvolvimento humano.";
+          botoesExtras.innerHTML = `
+            <a href="pedagogia.html" class="botoes2a" onclick="tocarSomAntesDeIr(event, this.href)">Mais informações</a>
+            <a class="botoes2a" href="https://docs.google.com/forms/d/e/1FAIpQLSfQj1eCzsszDaziLAAn45AOqDI2mIPK5bMn96XiHaQWzoujFg/viewform?usp=dialog" target="_blank">Questionario geral</a>
+          `;
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

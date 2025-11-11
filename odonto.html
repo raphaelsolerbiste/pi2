@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odontologia</title>
+  <style>
+      #video {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#video iframe {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.responsive-iframe {
+ width: 85%;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding-bottom: 5vh;
+}
+
+.responsive-iframe iframe {
+  width: 85%;
+  height: 50vh;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px double white;
+      border-radius: 1.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1%;
+      box-sizing: border-box;        
+}
+
+    html,
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('odonto.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Georgia, serif;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 10px;
+    }
+
+    #conteudo {
+      width: 85%;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1%;
+      padding: 2em;
+      box-sizing: border-box;
+    }
+
+    p {
+      margin-right: 10%;
+      margin-left: 10%;
+      text-indent: 30px;
+      font-size: 1.1em;
+      text-align: left;
+    }
+
+    h1,h2 {
+      color: rgb(12, 93, 72);
+    }
+    h2{ text-indent: 30px;
+text-align: center;
+  }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    #botaovoltar {
+      background-color: rgb(12, 93, 72);
+      color: white;
+      width: 10vh;
+      height: 5vh;
+      border-radius: 1.5em;
+      cursor: pointer;
+      margin: 1vh;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      margin-left: 4vh;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #botaovoltar:hover {
+      background-color: white;
+      color: rgb(12, 93, 72);
+      border: 2px double rgb(12, 93, 72);
+    }
+
+    img {
+      border-radius: 1em;
+      margin: 1em 0;
+      max-width: 100%;
+      height: auto;
+    }
+     ul{
+      padding-inline-start: 7vh;
+      padding-inline-end: 7vh;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      #conteudo,.responsive-iframe {
+        width: 95%;
+        padding: 1.5em;
+      }
+
+      .responsive-iframe{
+        width: 95%;
+      }
+
+      p {
+        font-size: 1em;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+
+      #botaovoltar {
+        width: 12vh;
+        height: 5vh;
+        font-size: 1em;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+        justify-content: flex-start;
+        background-size: cover;
+        padding: 10px;
+      }
+
+      #conteudo,.responsive-iframe {
+        width: 95%;
+        padding: 1em;
+        border-radius: 1em;
+      }
+        .responsive-iframe{
+        width: 95%;
+      }
+
+
+      p {
+        font-size: 0.95em;
+        text-indent: 15px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: justify;
+      }
+
+      h1 {
+        font-size: 1.3em;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      #botaovoltar {
+        width: 100px;
+        height: 40px;
+        margin-left: 2vh;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a id="botaovoltar" href="index.html">
+    Voltar
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+      <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+    </svg>
+  </a>
+
+  <audio id="clickSound" src="ingle-mouse-click-sound-hd-379373.mp3"></audio>
+
+  <div class="responsive-iframe">
+    <h1>Assista ao vídeo</h1>
+    <iframe src="https://www.youtube.com/watch?v=ViUObSJEVfI" title="Vídeo de Odontologia" allowfullscreen></iframe>
+     <h2><a href="https://www.youtube.com/watch?v=ViUObSJEVfI" style="color:rgb(12, 93, 72) ;">Se o video não funcionar clique aqui!</a></h2>
+  </div>
+
+  <section id="conteudo">
+
+    <h1>ODONTOLOGIA</h1>
+    <p>
+      O curso de Odontologia no Brasil forma profissionais capacitados para cuidar da saúde bucal das pessoas, promovendo bem-estar, estética e qualidade de vida por meio da prevenção, diagnóstico e tratamento das doenças que afetam a boca e os dentes.
+    </p>
+
+   
+
+    <h2>MATÉRIAS ESCOLARES QUE MAIS SE COMUNICAM COM A ODONTOLOGIA</h2>
+    <ul>
+      <li><strong>Biologia:</strong> base essencial para compreender o corpo humano, tecidos, microrganismos e funcionamento do sistema bucal.</li>
+      <li><strong>Química:</strong> importante para entender substâncias usadas em materiais odontológicos, anestésicos e processos de higiene.</li>
+      <li><strong>Física:</strong> auxilia na compreensão de instrumentos, forças e movimentos aplicados em procedimentos odontológicos.</li>
+      <li><strong>Matemática:</strong> usada em cálculos de proporções, dosagens e medidas clínicas.</li>
+      <li><strong>Artes:</strong> desenvolve senso estético, coordenação motora e percepção visual — qualidades fundamentais na prática odontológica.</li>
+      <li><strong>Redação e Língua Portuguesa:</strong> essenciais para elaboração de relatórios, prontuários e comunicação clara com pacientes.</li>
+    </ul>
+
+
+    <h2>DURAÇÃO E ESTRUTURA</h2>
+    <p style="text-indent: 0px;">
+      <strong>Média:</strong> 5 anos, divididos em 10 semestres.<br>
+      <strong>Modalidade:</strong> Bacharelado.<br>
+      <strong>Estágio:</strong> Obrigatório, geralmente a partir do 3º ou 4º ano, em clínicas-escola.<br>
+      <strong>TCC:</strong> Exigido na maioria das instituições.
+    </p>
+
+    
+
+    <h2>DISCIPLINAS PRINCIPAIS</h2>
+    <p>O curso combina teoria e prática, abordando desde as ciências biológicas até as especialidades clínicas.</p>
+
+    <h3>Ciclo básico (1º ao 3º ano)</h3>
+    <ul style="width: 85%;">
+      <li>Anatomia, Histologia e Fisiologia Humana</li>
+      <li>Microbiologia e Imunologia</li>
+      <li>Bioquímica</li>
+      <li>Embriologia</li>
+      <li>Saúde Coletiva</li>
+      <li>Materiais Dentários</li>
+      <li>Anatomia Dental</li>
+      <li>Oclusão</li>
+      <li>Radiologia Odontológica</li>
+    </ul>
+
+    <h3>Ciclo clínico (4º e 5º ano)</h3>
+    <ul style="width: 85%;">
+      <li>Clínica Integrada</li>
+      <li>Dentística Restauradora</li>
+      <li>Periodontia</li>
+      <li>Endodontia</li>
+      <li>Cirurgia Bucomaxilofacial</li>
+      <li>Prótese Dentária</li>
+      <li>Ortodontia</li>
+      <li>Odontopediatria</li>
+      <li>Estomatologia</li>
+      <li>Odontologia Legal e Ética Profissional</li>
+    </ul>
+
+    <hr>
+
+    <h2>FORMAÇÃO E PERFIL DO CIRURGIÃO-DENTISTA</h2>
+    <ul style="width: 85%;">
+      <li>Habilidades manuais e senso estético apurado;</li>
+      <li>Empatia e capacidade de lidar com o público;</li>
+      <li>Raciocínio clínico e científico;</li>
+      <li>Precisão e responsabilidade técnica;</li>
+      <li>Conhecimento amplo sobre saúde e anatomia bucal.</li>
+    </ul>
+
+    <hr>
+
+    <h2>ATUAÇÃO PROFISSIONAL E REGISTRO NO CRO</h2>
+    <p>
+      Para exercer a profissão, o cirurgião-dentista deve obter o registro no <strong>Conselho Regional de Odontologia (CRO)</strong> de seu estado. </p>
+  
+      <p>A área odontológica é ampla e diversificada, com múltiplas possibilidades de atuação:
+    </p>
+
+    <h3>Clínica e atendimento</h3>
+    <ul style="width: 85%;">
+      <li>Odontologia Geral</li>
+      <li>Ortodontia</li>
+      <li>Endodontia</li>
+      <li>Periodontia</li>
+      <li>Cirurgia Bucomaxilofacial</li>
+      <li>Odontopediatria</li>
+      <li>Prótese Dentária</li>
+      <li>Odontologia Estética</li>
+    </ul>
+
+    <h3>Outros campos</h3>
+    <ul style="width: 85%;">
+      <li>Saúde Pública (no SUS)</li>
+      <li>Odontologia Hospitalar</li>
+      <li>Docência e pesquisa científica</li>
+      <li>Odontologia Legal e Perícia</li>
+      <li>Gestão e empreendedorismo em clínicas odontológicas</li>
+    </ul>
+  </section>
+
+
+  <script>
+const clickAudio = document.getElementById("clickSound");
+  
+function tocarSomAntesDeIr(event, url = null) {
+  event.preventDefault(); 
+  clickAudio.currentTime = 0;
+  clickAudio.play();
+
+  if (url) {
+    setTimeout(() => {
+      window.location.href = url;
+    }, 200);
+  }
+}
+
+document.querySelectorAll("a, button").forEach(el => {
+  el.addEventListener("click", function(e) {
+    if (el.tagName === "A" && el.href) {
+      tocarSomAntesDeIr(e, el.href);
+    } else {
+      clickAudio.currentTime = 0;
+      clickAudio.play();
+    }
+  });
+});
+</script>
+</body>
+</html>

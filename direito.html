@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direito</title>
+  <style>
+    #video {
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    #video iframe {
+      width: 100%;
+      height: 100px;
+      margin: 0 auto;
+    }
+
+    .responsive-iframe {
+      width: 85%;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding-bottom: 5vh;
+    }
+
+    .responsive-iframe iframe {
+      width: 85%;
+      height: 50vh;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 2px double white;
+      border-radius: 1.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1%;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('direito.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Georgia, serif;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 10px;
+    }
+
+    #conteudo {
+      width: 85%;
+      max-width: 90vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.8em;
+      border: 2px double white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1%;
+      padding: 2em;
+      box-sizing: border-box;
+    }
+
+    p {
+      margin-right: 10%;
+      margin-left: 10%;
+      text-indent: 30px;
+      font-size: 1.1em;
+      text-align: left;
+    }
+
+    h1,
+    h2 {
+      color: rgb(12, 93, 72);
+    }
+
+    h2 {
+      text-indent: 30px;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    #botaovoltar {
+      background-color: rgb(12, 93, 72);
+      color: white;
+      width: 10vh;
+      height: 5vh;
+      border-radius: 1.5em;
+      cursor: pointer;
+      margin: 1vh;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      margin-left: 4vh;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #botaovoltar:hover {
+      background-color: white;
+      color: rgb(12, 93, 72);
+      border: 2px double rgb(12, 93, 72);
+    }
+
+    img {
+      border-radius: 1em;
+      margin: 1em 0;
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul{
+      padding-inline-start: 7vh;
+      padding-inline-end: 7vh;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      #conteudo,
+      .responsive-iframe {
+        width: 95%;
+        padding: 1.5em;
+      }
+
+      .responsive-iframe {
+        width: 95%;
+      }
+
+      p {
+        font-size: 1em;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+
+      #botaovoltar {
+        width: 12vh;
+        height: 5vh;
+        font-size: 1em;
+      }
+    }
+
+    /* Celulares (largura até 600px) */
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+        justify-content: flex-start;
+        background-size: cover;
+        padding: 10px;
+      }
+
+      #conteudo,
+      .responsive-iframe {
+        width: 95%;
+        padding: 1em;
+        border-radius: 1em;
+      }
+
+      .responsive-iframe {
+        width: 95%;
+      }
+
+
+      p {
+        font-size: 0.95em;
+        text-indent: 15px;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: justify;
+      }
+
+      h1 {
+        font-size: 1.3em;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      #botaovoltar {
+        width: 100px;
+        height: 40px;
+        margin-left: 2vh;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Botão Voltar -->
+  <a id="botaovoltar" href="index.html">
+    Voltar
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+      <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+    </svg>
+  </a>
+
+  <audio id="clickSound" src="ingle-mouse-click-sound-hd-379373.mp3"></audio>
+
+  <div class="responsive-iframe">
+    <h1>Assista ao vídeo</h1>
+    <iframe src="https://www.youtube.com/watch?v=uEuuoXxkCLY" title="Vídeo de Odontologia" allowfullscreen></iframe>
+    <h2><a href="https://www.youtube.com/watch?v=uEuuoXxkCLY" style="color:rgb(12, 93, 72) ;">Se o video não funcionar clique aqui!</a></h2>
+  </div>
+
+  <section id="conteudo">
+    <h1>DIREITO</h1>
+    <p>
+      O curso de Direito no Brasil forma profissionais preparados para compreender, interpretar e aplicar as leis,
+      promovendo a justiça e a cidadania.
+    </p>
+
+    <h2>MATÉRIAS ESCOLARES QUE MAIS SE COMUNICAM COM O DIREITO</h2>
+    <ul>
+      <li><strong>Língua Portuguesa:</strong> fundamental para interpretação de textos, escrita jurídica e argumentação.
+      </li>
+      <li><strong>Filosofia:</strong> estimula o pensamento crítico, ético e reflexivo sobre justiça e sociedade.</li>
+      <li><strong>Sociologia:</strong> ajuda a entender o comportamento humano, as instituições e os problemas sociais.
+      </li>
+      <li><strong>História:</strong> fornece base para compreender a evolução das leis, dos direitos e das instituições
+        políticas.</li>
+      <li><strong>Atualidades / Geografia / Política:</strong> importantes para acompanhar temas sociais e jurídicos
+        contemporâneos.</li>
+      <li><strong>Redação:</strong> essencial para elaborar petições, pareceres e textos argumentativos.</li>
+    </ul>
+
+    <h2>DURAÇÃO E ESTRUTURA</h2>
+    <p style="text-indent: 0px;"><strong>Média:</strong> 5 anos, dividido em 10 semestres.<br>
+      <strong>Modalidade:</strong> Bacharelado.<br>
+      <strong>Estágio:</strong> Obrigatório geralmente nos dois últimos anos.<br>
+      <strong>TCC:</strong> Exigido na maioria das instituições.
+    </p>
+
+    <h2>DISCIPLINAS PRINCIPAIS</h2>
+    <p>O curso é dividido entre disciplinas teóricas e práticas, abrangendo diversos ramos do Direito.</p>
+
+    <h3>Ciclo básico (1º ao 3º ano)</h3>
+    <ul style="width: 85%;">
+      <li>Introdução ao Estudo do Direito</li>
+      <li>Teoria Geral do Estado</li>
+      <li>Ciência Política</li>
+      <li>Direito Constitucional</li>
+      <li>Direito Civil (Parte Geral, Obrigações, Contratos, Família e Sucessões)</li>
+      <li>Direito Penal (Parte Geral e Especial)</li>
+      <li>Direito Administrativo</li>
+      <li>Direito Empresarial</li>
+      <li>Direito Tributário</li>
+      <li>Direito Processual Civil e Penal</li>
+      <li>Direito do Trabalho</li>
+      <li>Direito Internacional</li>
+      <li>Filosofia e Sociologia do Direito</li>
+      <li>Hermenêutica Jurídica</li>
+    </ul>
+
+    <h3>Ciclo profissionalizante (4º e 5º ano)</h3>
+    <ul style="width: 85%;">
+      <li>Prática jurídica (cível, penal, trabalhista, tributária etc.)</li>
+      <li>Estágio supervisionado</li>
+      <li>Ética profissional</li>
+      <li>Direitos Humanos</li>
+      <li>Direito Ambiental, Digital ou Previdenciário (a depender da grade)</li>
+    </ul>
+
+    <h2>FORMAÇÃO E PERFIL DO BACHAREL</h2>
+    <ul style="width: 85%;">
+      <li>Capacidade de argumentação e interpretação jurídica;</li>
+      <li>Leitura crítica da sociedade e das instituições;</li>
+      <li>Habilidades de comunicação oral e escrita;</li>
+      <li>Raciocínio lógico e analítico;</li>
+      <li>Compreensão das normas e princípios jurídicos.</li>
+    </ul>
+
+    <h2>ATUAÇÃO PROFISSIONAL E OAB</h2>
+    <p>
+      O Direito é uma área rica e diversificada, oferecendo uma vasta gama de oportunidades no mercado de trabalho,
+      atendendo aos interesses e habilidades dos mais diversos perfis.
+    </p>
+
+    <h3>Para exercer a advocacia</h3>
+    <p>O bacharel precisa ser aprovado no Exame da OAB, composto por:</p>
+    <ul style="width: 85%;">
+      <li><strong>1ª fase:</strong> prova objetiva (80 questões de múltipla escolha). É necessário acertar pelo menos 40
+        questões.</li>
+      <li><strong>2ª fase:</strong> prova prático-profissional (peça processual + 4 questões discursivas). É necessário
+        alcançar nota igual ou superior a 6,0.</li>
+    </ul>
+
+    <h3>Mediante concurso público</h3>
+    <ul style="width: 85%;">
+      <li>Juiz (Magistratura)</li>
+      <li>Promotor de Justiça (Ministério Público)</li>
+      <li>Defensor Público</li>
+      <li>Delegado de Polícia</li>
+      <li>Procurador (Federal, Estadual ou Municipal)</li>
+      <li>Analista ou Técnico Judiciário</li>
+    </ul>
+
+    <h3>Outras áreas</h3>
+    <ul style="width: 85%;">
+      <li>Consultoria jurídica em empresas e ONGs</li>
+      <li>Mediação e arbitragem</li>
+      <li>Ensino e pesquisa (como professor de Direito)</li>
+    </ul>
+  </section>
+
+
+
+
+  <script>
+    const clickAudio = document.getElementById("clickSound");
+
+    function tocarSomAntesDeIr(event, url = null) {
+      event.preventDefault();
+      clickAudio.currentTime = 0;
+      clickAudio.play();
+
+      if (url) {
+        setTimeout(() => {
+          window.location.href = url;
+        }, 200);
+      }
+    }
+
+    document.querySelectorAll("a, button").forEach(el => {
+      el.addEventListener("click", function (e) {
+        if (el.tagName === "A" && el.href) {
+          tocarSomAntesDeIr(e, el.href);
+        } else {
+          clickAudio.currentTime = 0;
+          clickAudio.play();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
